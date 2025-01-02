@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    display: flex;
+    background-color: #34db7a;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    height: 270px;
+    width: 400px;
+    transition: 0.2s;
+}
+
+.container.active {
+    height: 500px;
+}
+
+/* Header */
+#qr-header h1 {
+    font-size: 1.8rem;
+    margin: 12px;
+}
+
+#qr-header p {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Form */
+#qr-inputs {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 15px;
+}
+
+#qr-inputs input[type="text"], 
+button {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 55px;
+    font-size: 0.9rem;
+}
+
+#qr-inputs input[type="text"] {
+    margin-bottom: 17px;
+    border: 1px solid #444;
+    padding: 10px 15px;
+}
+
+
+#qr-inputs button {
+    border: none;
+    background-color: #0e7037;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.4s;
+}
+
+#qr-inputs button:hover {
+    opacity: 1;
+}
+
+/* QR Code */
+#img-qr {
+    display: flex;
+    opacity: 0;
+    border: 1px solid #ccc;
+    padding: 30px 0;
+    margin: 20px 15px;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.container.active #img-qr {
+    opacity: 1;
+}
